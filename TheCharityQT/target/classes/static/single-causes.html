@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TheCharity爱心公益网</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="single-page single-cause">
+    <header class="site-header">
+        <div class="top-header-bar">
+            <div class="container">
+                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                    <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                        <div class="header-bar-email">
+                            电子邮箱：<a href="#">1369281736@qq.com</a>
+                        </div><!-- .header-bar-email -->
+
+                        <div class="header-bar-text">
+                            <p> 捐助热线：<span>13219899635</span></p>
+                        </div><!-- .header-bar-text -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                        <!-- 检查session是否有user -->
+                        <!-- 有就显示用户+注销 否则显示登录和注册 -->
+                        <div class="donate-btn" id="div_userInfo" style="margin-left: 2px;display: none">
+    							<span>
+    								<img alt="" style="cursor: pointer;" src="images/testimonial-1.jpg" onclick="changeAvatar()" id="t_img">
+    								<input type="file" style="display: none;" id="edit_pIcon" onchange="upload(this,'pIcon')">
+                                    <input type="hidden" id="pIcon">
+    								<a href="profile.html" id="a_username">Jenifer Smith</a>
+    							</span>
+                        </div>
+                        <div class="donate-btn" id="div_logout" style="margin-left: 2px;display: none">
+                            <a href="#">注销</a>
+                        </div>
+                        <div class="donate-btn" id="div_login" style="margin-left: 2px;">
+                            <a href="login.html">登录</a>
+                        </div>
+                        <div class="donate-btn" id="div_register" style="margin-left: 2px;">
+                            <a href="register.html">注册</a>
+                        </div>
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .top-header-bar -->
+
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo.png" alt="logo"></a>
+                        </div><!-- .site-branding -->
+
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="portfolio.html">图片集</a></li>
+                                <li class="current-menu-item"><a href="allCauses.html">慈善项目</a></li>
+                                <li><a href="about.html">成为志愿者</a></li>
+                                <li><a href="news.html">新闻资讯</a></li>
+                                <li><a href="causes.html">捐赠情况</a></li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>The Cause</h1>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .page-header -->
+
+    <div class="highlighted-cause">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7 order-2 order-lg-1">
+                    <div class="section-heading">
+                        <h2 class="entry-title" id="entry-title">“慈善情暖万家”扶贫济困活动</h2>
+                    </div><!-- .section-heading -->
+                    <h3 style="margin-top: 5%;">项目背景：</h3>
+                    <div class="entry-content mt-5">
+                        <p id="entry-content">经过三十多年高速的经济发展，我国已成为世界第二大经济体。然而由于发展不平衡，我国贫困人口规模仍然很大，贫困问题仍然十分突出。国家统计局数据显示，截至2014年底，全国还有2948.5万个贫困户、7017万贫困人口。全国不仅有14个连片特困地区,除京津沪3个直辖市外,其余28个省级行政区都存在相当数量的贫困人口，
+						其中贵州、云南、河南、广西、湖南、四川6个省区贫困人口均超过500万。同时，作为自然灾害最严重的少数几个国家之一，我国具有自然灾害种类多、频率高、损失重等特点，而自然灾害发生后产生的“因灾致贫”和“因灾返贫”现象则是导致贫困人口生产和生活陷入困境的重要原因，也是制约我国社会经济可持续发展，
+						特别是贫困地区经济可持续发展的主要因素之一。</p>
+                    </div><!-- .entry-content -->
+
+                    <div class="fund-raised w-100 mt-5">
+                        <div class="featured-fund-raised-bar barfiller" id="fund-raised">
+                            <div class="tipWrap">
+                                <span class="tip"></span>
+                            </div><!-- .tipWrap -->
+
+                            <span id="causePercentage" class="fill" data-percentage="60"></span>
+                        </div><!-- .fund-raised-bar -->
+
+                        <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="fund-raised-total mt-4">
+                                Raised: ￥<span id="causeRaised">56 880</span>
+                            </div><!-- .fund-raised-total -->
+
+                            <div class="fund-raised-goal mt-4">
+                                Goal: ￥<span id="causeGoal">70000</span>
+                            </div><!-- .fund-raised-goal -->
+                        </div><!-- .fund-raised-details -->
+                    </div><!-- .fund-raised -->
+
+                    <div class="entry-footer mt-5">
+                        <a href="#donate" class="btn gradient-bg">立刻捐助</a>
+                    </div><!-- .entry-footer -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-5 order-1 order-lg-2">
+                    <img id="causeImg" src="images/oshomah.jpg" alt="">
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .highlighted-cause -->
+
+    <div class="short-content-wrap">
+        <div class="container">
+            <div class="row">
+				
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="short-content">
+                        <h3 class="entry-title">项目简介：</h3>
+
+                        <p id="causeSummary">“慈善情暖万家”活动是由中华慈善总会牵头，并发动全国各地慈善会共同实施的一个大型慈善助困项目。该项目通过充分动员包括爱心企事业单位、社会组织和爱心人士在内的社会各界力量捐款捐物、开展志愿服务，为身处困境的基层贫困群众送去物资支持和精神慰藉，鼓励他们重树生活信心、自强自立、逐渐摆脱生活困境。</p>
+                    </div>
+                </div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+				     <div class="short-content">
+				         <h3 class="entry-title">项目目标：</h3>
+				
+				         <p id="causeTask">1、向基层贫困群众发放善款：事前通过多方筹款，在慰问基层贫困群众时以现金形式将善款及时发放到他们手中。2、向基层贫困群众发放生活必需物资：
+
+事前通过多方筹款，采买基层贫困群众急需的生活必需物资，并及时发放到他们手中。</p>
+				     </div>
+				 </div>
+				
+				
+                
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+				<a name="donate"></a>
+                <div class="donation-form-wrap">
+                    <h2>捐助信息填写</h2>
+                    <h4 class="mt-5">捐助金额：</h4>
+
+                    <form class="donation-form">
+                        <div class="donate-amount-wrap d-flex flex-wrap align-items-center mt-5">
+							<label class="radio-label">
+							    <input type="radio" name="donation_amount" value="1" />
+							    <span class="donate-amount">1</span>
+							</label>
+							
+							<label class="radio-label">
+							    <input type="radio" name="donation_amount" value="5"  checked="checked" />
+							    <span class="donate-amount">5</span>
+							</label>
+							
+                            <label class="radio-label">
+                                <input type="radio" name="donation_amount" value="10" />
+                                <span class="donate-amount">10</span>
+                            </label>
+
+                            <label class="radio-label">
+                                <input type="radio" name="donation_amount" value="20" />
+                                <span class="donate-amount">20</span>
+                            </label>
+
+                            <label class="radio-label">
+                                <input type="radio" name="donation_amount" value="25"/>
+                                <span class="donate-amount">25</span>
+                            </label>
+
+                            <label class="radio-label">
+                                <input type="radio" name="donation_amount" value="50" />
+                                <span class="donate-amount">50</span>
+                            </label>
+
+                            <label class="radio-label">
+                                <input type="radio" name="donation_amount" value="100" />
+                                <span class="donate-amount">100</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="donation_amount" value="1000" />
+                                <span class="donate-amount">1000</span>
+                            </label>
+                            
+                        </div>
+                        <div class="billing-information  d-flex flex-wrap justify-content-between align-items-center">
+                            <h4 class="w-100 mt-5 mb-3">个人信息：</h4>
+
+                            <input type="text" id="nickName" placeholder="姓名:">
+                            <input type="email" id="donorEmail" placeholder="邮箱:">
+                            <input type="text" id="donorAddress" placeholder="地址:">
+                            <input type="text" id="donorMessage" placeholder="留言:">
+                        </div>
+
+                        <div class="payment-type d-flex flex-wrap align-items-center">
+                            <h4 class="w-100 mt-5">支付方式</h4>
+
+                            <label class="d-flex align-items-center mt-4">
+                                <input type="radio" name="payment_method" value="PayPal" checked="checked" />
+                                <span class="payment-type-radio"></span>
+                                <span class="centered-dot"></span>
+
+                                支付宝
+                            </label>
+                        </div>
+                        <input class="btn gradient-bg mt-5"  type="button" onclick="makeDonation()" value="确定捐助">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="foot-about">
+                                <h2><a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a></h2>
+    
+                                <p>公益的灵魂--帮助真正需要帮助的人。通过的平台让每个人都能伸出援助之手,让身在困境之中的人得到帮助和感受社会的温暖,致力于找到那些真正需要帮助的人们，希望您能同我一起为他们贡献出一份力。</p>
+                            </div><!-- .foot-about -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                           <center><h2>网站导航</h2></center>
+    
+                            <ul style="padding-left: 100px;">
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="portfolio.html">图片集</a></li>
+                                <li><a href="news.html">慈善项目</a></li>
+                                <li><a href="about.html">成为志愿者</a></li>
+                                <li><a href="news.html">新闻资讯</a></li>
+                                <li><a href="causes.html">捐赠情况</a></li>
+                            </ul>
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-latest-news">
+                                <h2>最新资讯</h2>
+    
+                                <ul id="foot-latest-news">
+                                    <li>
+                                        <h3><a href="single-news.html">A new cause to help</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+    
+                                    <li>
+                                        <h3><a href="single-news.html">We love to help people</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+    
+                                    <li>
+                                        <h3><a href="single-news.html">The new ideas for helping</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+                                </ul>
+                            </div><!-- .foot-latest-news -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-contact">
+                                <h2>联系方式</h2>
+    
+                                <ul>
+                                    <li><i class="fa fa-phone"></i><span>13219899635</span></li>
+                                    <li><i class="fa fa-envelope"></i><span>1369281736@qq.com</span></li>
+                                    <li><i class="fa fa-map-marker"></i><span>四川省 成都 青羊区 XXX路5号</span></li>
+                                </ul>
+                            </div><!-- .foot-contact -->
+    
+                            <!--<div class="subscribe-form">
+                                <form class="d-flex flex-wrap align-items-center">
+                                    <input type="email" placeholder="Your email">
+                                    <input type="submit" value="send">
+                                </form>
+                            </div> .search-widget -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-widgets -->
+    
+            <div class="footer-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    					          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div><!-- .col-12 -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-bar -->
+        </footer><!-- .site-footer -->
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+    <script type='text/javascript' src='layer/layer.js'></script>
+    <script type='text/javascript' src='js/funcJs/base.js'></script>
+    <script type='text/javascript' src='js/funcJs/uploadFile.js'></script>
+    <script type='text/javascript' src='js/funcJs/singleCauses.js'></script>
+</body>
+</html>

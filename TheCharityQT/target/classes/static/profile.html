@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TheCharity爱心公益网</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+	
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="single-page about-page">
+<header class="site-header">
+    <div class="top-header-bar">
+        <div class="container">
+            <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                    <div class="header-bar-email">
+                        电子邮箱：<a href="#">1369281736@qq.com</a>
+                    </div><!-- .header-bar-email -->
+
+                    <div class="header-bar-text">
+                        <p> 捐助热线：<span>13219899635</span></p>
+                    </div><!-- .header-bar-text -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                    <!-- 检查session是否有user -->
+                    <!-- 有就显示用户+注销 否则显示登录和注册 -->
+                    <div class="donate-btn" id="div_userInfo" style="margin-left: 2px;display: none">
+    							<span>
+    								<img alt="" style="cursor: pointer;" src="images/testimonial-1.jpg" onclick="changeAvatar()" id="t_img">
+    								<input type="file" style="display: none;" id="edit_pIcon" onchange="upload(this,'pIcon')">
+                                    <input type="hidden" id="pIcon">
+    								<a href="profile.html" id="a_username">Jenifer Smith</a>
+    							</span>
+                    </div>
+                    <div class="donate-btn" id="div_logout" style="margin-left: 2px;display: none">
+                        <a href="#">注销</a>
+                    </div>
+                    <div class="donate-btn" id="div_login" style="margin-left: 2px;">
+                        <a href="login.html">登录</a>
+                    </div>
+                    <div class="donate-btn" id="div_register" style="margin-left: 2px;">
+                        <a href="register.html">注册</a>
+                    </div>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div>
+
+    <div class="nav-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="site-branding d-flex align-items-center">
+                        <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo.png" alt="logo"></a>
+                    </div><!-- .site-branding -->
+
+                    <nav class="site-navigation d-flex justify-content-end align-items-center">
+                        <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="portfolio.html">图片集</a></li>
+                            <li><a href="allCauses.html">慈善项目</a></li>
+                            <li><a href="about.html">成为志愿者</a></li>
+                            <li><a href="news.html">新闻资讯</a></li>
+                            <li><a href="causes.html">捐赠情况</a></li>
+                        </ul>
+                    </nav><!-- .site-navigation -->
+
+                    <div class="hamburger-menu d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+	<div class="container">
+
+		<section class="panel">
+		 <ul class="nav nav-tabs">
+		   <li class="active">
+				<a data-toggle="tab" href="#profile">
+					<i class="fa fa-info-circle"></i>
+					个人信息
+				</a>
+		   </li>
+		   <li>
+				 <a data-toggle="tab" href="#edit-profile">
+					   <i class="fa fa-wrench"></i>
+					   修改信息
+				 </a>
+		   </li>
+		 </ul>
+		<div class="profile_info">
+			<!-- profile -->
+			<div id="profile" class="tab-pane active">
+				 <section class="panel">
+				   <div class="bio-graph-heading" id="personInfo">
+					 Hello I’m Jenifer Smith, a leading expert in interactive and creative design specializing in the mobile medium. My graduation from Massey University with a Bachelor of Design majoring in visual communication.
+				   </div>
+				   <div class="panel-body bio-graph-info">
+					 <h1 style="text-align: center;color: #262626;">基本信息</h1>
+					 <div class="row">
+					   <div class="bio-row">
+						 <p>真实姓名:&emsp; <span id="nick_name">老王 </span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>性 别 : &emsp;<span id="sex">男</span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>注册日期: &emsp;<span id="create_time" style="display: inline">2022-04-14 12:38:06</span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>所在地区 : &emsp;<span id="address" style="display: inline">中国四川省成都市金牛区</span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>职 业 :&emsp; <span id="occupation">程序猿</span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>电子邮箱 :&emsp;<span id="email">1369281736@qq.com</span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>手 机 :&emsp; <span id="mobile">13219899635</span></p>
+					   </div>
+					   <div class="bio-row">
+						 <p>捐助金额 : &emsp;<span id="doAmount">1666¥</span></p>
+					   </div>
+					 </div>
+				   </div>
+				 </section>
+			</div>
+			<!-- edit-profile -->
+			<div id="edit-profile" class="tab-pane">
+				 <section class="panel">
+				   <div class="panel-body bio-graph-info">
+					 <h1> 基本信息</h1>
+					 <form class="form-horizontal" role="form" onsubmit="return false;">
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">真实姓名：</label>
+						 <div class="col-lg-6">
+						   <input type="text" class="form-control" id="e-name" placeholder="请输入真实姓名">
+						 </div>
+					   </div>
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">性别：</label>
+						 <div class="col-lg-6">
+						   <input type="text" class="form-control" id="e-Sex" placeholder="请输入男/女">
+						 </div>
+					   </div>
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">个人介绍：</label>
+						 <div class="col-lg-10">
+						   <textarea name="" id="e-personInfo" class="form-control" cols="30" rows="5" placeholder="简单说明一下自己"></textarea>
+						 </div>
+					   </div>
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">所在地区：</label>
+						 <div class="col-lg-6">
+						   <input type="text" class="form-control" id="e-address" placeholder="请输入所在的国家城市">
+						 </div>
+					   </div>
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">职业：</label>
+						 <div class="col-lg-6">
+						   <input type="text" class="form-control" id="e-occupation" placeholder="请输入目前的职业">
+						 </div>
+					   </div>
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">电子邮箱：</label>
+						 <div class="col-lg-6">
+						   <input type="text" class="form-control" id="e-email" placeholder="请输入电子邮箱">
+						 </div>
+					   </div>
+					   <div class="form-group">
+						 <label class="col-lg-2 control-label">手机</label>
+						 <div class="col-lg-6">
+						   <input type="text" class="form-control" id="e-mobile" placeholder="请输入真实的手机号码">
+						 </div>
+					   </div>
+
+					   <div class="form-group">
+						 <div class="col-lg-offset-2 col-lg-10">
+						 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+							 <button type="submit" class="btn gradient-bg mr-2" onclick="updateUserInfo()">保存</button>
+						 </footer>
+						 </div>
+					   </div>
+					 </form>
+				   </div>
+				 </section>
+			</div>
+		</div>
+    </div>
+
+
+
+
+
+    <footer class="site-footer">
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="foot-about">
+                                <h2><a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a></h2>
+    
+                                <p>公益的灵魂--帮助真正需要帮助的人。通过的平台让每个人都能伸出援助之手,让身在困境之中的人得到帮助和感受社会的温暖,致力于找到那些真正需要帮助的人们，希望您能同我一起为他们贡献出一份力。</p>
+                            </div><!-- .foot-about -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                           <center><h2>网站导航</h2></center>
+    
+                            <ul style="padding-left: 100px;">
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="portfolio.html">图片集</a></li>
+                                <li><a href="news.html">慈善项目</a></li>
+                                <li><a href="about.html">成为志愿者</a></li>
+                                <li><a href="news.html">新闻资讯</a></li>
+                                <li><a href="causes.html">捐赠情况</a></li>
+                            </ul>
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-latest-news">
+                                <h2>最新资讯</h2>
+    
+                                <ul id="foot-latest-news">
+                                    <li>
+                                        <h3><a href="single-news.html">A new cause to help</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+    
+                                    <li>
+                                        <h3><a href="single-news.html">We love to help people</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+    
+                                    <li>
+                                        <h3><a href="single-news.html">The new ideas for helping</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+                                </ul>
+                            </div><!-- .foot-latest-news -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-contact">
+                                <h2>联系方式</h2>
+    
+                                <ul>
+                                    <li><i class="fa fa-phone"></i><span>13219899635</span></li>
+                                    <li><i class="fa fa-envelope"></i><span>1369281736@qq.com</span></li>
+                                    <li><i class="fa fa-map-marker"></i><span>四川省 成都 青羊区 XXX路5号</span></li>
+                                </ul>
+                            </div><!-- .foot-contact -->
+    
+                            <!--<div class="subscribe-form">
+                                <form class="d-flex flex-wrap align-items-center">
+                                    <input type="email" placeholder="Your email">
+                                    <input type="submit" value="send">
+                                </form>
+                            </div> .search-widget -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-widgets -->
+    
+            <div class="footer-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    					          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div><!-- .col-12 -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-bar -->
+        </footer><!-- .site-footer -->
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+    <script type='text/javascript' src='layer/layer.js'></script>
+    <script type='text/javascript' src='js/funcJs/base.js'></script>
+    <script type='text/javascript' src='js/funcJs/uploadFile.js'></script>
+    <script type='text/javascript' src='js/funcJs/profile.js'></script>
+</body>
+</html>

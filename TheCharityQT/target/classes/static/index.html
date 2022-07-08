@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <title>TheCharity爱心公益网</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<style> 
+				
+	</style>
+	
+</head>
+<body>
+    <header class="site-header">
+            <div class="top-header-bar">
+                <div class="container">
+                    <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email">
+                                电子邮箱：<a href="#">1369281736@qq.com</a>
+                            </div><!-- .header-bar-email -->
+    
+                            <div class="header-bar-text">
+                                <p> 捐助热线：<span>13219899635</span></p>
+                            </div><!-- .header-bar-text -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+    						<!-- 检查session是否有user -->
+    						<!-- 有就显示用户+注销 否则显示登录和注册 -->
+    						<div class="donate-btn" id="div_userInfo" style="margin-left: 2px;display: none">
+    							<span>
+    								<img alt="" style="cursor: pointer;" src="images/testimonial-1.jpg" onclick="changeAvatar()" id="t_img">
+    								<input type="file" style="display: none;" id="edit_pIcon" onchange="upload(this,'pIcon')">
+                                    <input type="hidden" id="pIcon">
+    								<a href="profile.html" id="a_username">Jenifer Smith</a>
+    							</span>
+    						</div>
+    						<div class="donate-btn" id="div_logout" style="margin-left: 2px;display: none">
+    							<a href="#">注销</a>
+    						</div>
+    						<div class="donate-btn" id="div_login" style="margin-left: 2px;">
+    							<a href="login.html">登录</a>
+    						</div>
+    						<div class="donate-btn" id="div_register" style="margin-left: 2px;">
+    						    <a href="register.html">注册</a>
+    						</div>
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .top-header-bar -->
+    
+            <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="site-branding d-flex align-items-center">
+                               <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo.png" alt="logo"></a>
+                            </div><!-- .site-branding -->
+    
+                            <nav class="site-navigation d-flex justify-content-end align-items-center">
+                                <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li class="current-menu-item"><a href="index.html">首页</a></li>
+                                    <li><a href="portfolio.html">图片集</a></li>
+                                    <li><a href="allCauses.html">慈善项目</a></li>
+                                    <li><a href="about.html">成为志愿者</a></li>
+                                    <li><a href="news.html">新闻资讯</a></li>
+                                    <li><a href="causes.html">捐赠情况</a></li>
+                                </ul>
+                            </nav><!-- .site-navigation -->
+    
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nav-bar -->
+        </header><!-- .site-header -->
+
+    <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-content-wrap">
+                <img src="images/hero.jpg" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h2>矮小症关爱活动走入贫困村庄科普矮小症知识</h2>
+                                    <h4>AI YOU FOUNDATION</h4>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content mt-4">
+                                    <p>儿童生长发育系列公益活动在贫困村庄展开。本次活动由中国红十字基金会和XX大学附属第二医院共同主办。活动邀请该院儿科和儿保科专家现场授课，并开展了儿童生长发育义诊，为身高偏矮的儿童进行骨龄测评，帮孩子们制定个性化的科学成长方案。</p>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                    <a href="single-causes.html?causeId=5#donate" class="btn gradient-bg mr-2">立刻捐助</a>
+                                    <a href="single-causes.html?causeId=5" class="btn orange-border">了解详情</a>
+                                </footer><!-- .entry-footer -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+
+            <div class="swiper-slide hero-content-wrap">
+                <img src="images/cause-bg.jpg" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h2>天使儿童医院开启春季康复爱心援助活动</h2>
+                                    <h4>CHILDREN'S CHARITY</h4>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content mt-4">
+                                    <p>为全面帮扶特殊儿童发展及成长，减轻特殊儿童家庭经济困难，天使儿童医院特此春季针对儿童疑难病进行公益援助活动</p>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                    <a href="single-causes.html?causeId=6#donate" class="btn gradient-bg mr-2">立刻捐助</a>
+                                    <a href="single-causes.html?causeId=6" class="btn orange-border">了解详情</a>
+                                </footer><!-- .entry-footer -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+
+            <div class="swiper-slide hero-content-wrap">
+                <img src="images/5.jpg" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h2>守护来自星星的孩子们</h2>
+                                    <h4>Children's Foundation of China</h4>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content mt-4">
+                                    <p>近日,轻松筹联合公益基金会(WABC)启动了“错袜日特殊儿童关爱计划”,为儿童们送去温暖和关怀,呼吁大家以穿错袜的方式,表达对“自闭症”、“脑瘫”等特殊人群的支持。</p>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                    <a href="single-causes.html?causeId=7#donate" class="btn gradient-bg mr-2">立刻捐助</a>
+                                    <a href="single-causes.html?causeId=7" class="btn orange-border">了解详情</a>
+                                </footer><!-- .entry-footer -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+        </div><!-- .swiper-wrapper -->
+
+        <div class="pagination-wrap position-absolute w-100">
+            <div class="container">
+                <div class="swiper-pagination"></div>
+            </div><!-- .container -->
+        </div><!-- .pagination-wrap -->
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+        </div>
+
+        <div class="swiper-button-prev flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+        </div>
+    </div><!-- .hero-slider -->
+
+    <div class="home-page-icon-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <figure class="d-flex justify-content-center">
+                            <img src="images/hands-gray.png" alt="">
+                            <img src="images/hands-white.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <a href="about.html"><h3 class="entry-title">加入我们,成为志愿者</h3></a>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>社会的进步离不开文明的滋养，社会的和谐离不开爱心的付出，离不开“奉献、友爱、互助、进步”的志愿服务精神。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <figure class="d-flex justify-content-center">
+                            <img src="images/donation-gray.png" alt="">
+                            <img src="images/donation-white.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <a href="allCauses.html"><h3 class="entry-title">人人捐助,散播爱心</h3></a>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>今天您帮助别人,也许明天您也需要到别人的帮助。种下一棵树，收获一片绿阴;献出一份爱心,托起一份希望。爱心储蓄,现在开始。 </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <figure class="d-flex justify-content-center">
+                            <img src="images/charity-gray.png" alt="">
+                            <img src="images/charity-white.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <a href="news.html"><h3 class="entry-title">真实实时,新闻资讯</h3></a>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>实时报道最新公益慈善实事，将公益事业活动的最真实的一面展现给广大公众，激发公众兴趣，引导公众积极参与其中 </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+    <div class="home-page-welcome">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                    <div class="welcome-content">
+                        <header class="entry-header">
+                            <h2 class="entry-title">Wellcome to TheCharity</h2>
+                        </header><!-- .entry-header -->
+
+                        <div class="entry-content mt-5">
+                            <p>TheCharity公益慈善网站是一个免费发布有关慈善公益事业的网上信息服务平台,公益的灵魂--帮助真正需要帮助的人。通过的平台让每个人都能伸出援助之手,让身在困境之中的人得到帮助和感受社会的温暖,致力于找到那些真正需要帮助的人们，借此网站进行宣传，得到大众积极的支持和帮助，为他们提供一个良好的生活环境，摆脱生来的不平等。</p>
+                        </div><!-- .entry-content -->
+
+                        <div class="entry-footer mt-5">
+                            <a href="portfolio.html" class="btn gradient-bg mr-2">了解更多</a>
+                        </div><!-- .entry-footer -->
+                    </div><!-- .welcome-content -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-6 mt-4 order-1 order-lg-2">
+                    <img src="images/welcome.jpg" alt="welcome">
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+    <div class="home-page-events">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="upcoming-events" id="upcoming-events">
+                        <div class="section-heading">
+                            <h2 class="entry-title">近期公益活动</h2>
+                        </div><!-- .section-heading -->
+
+                        <div class="event-wrap d-flex flex-wrap justify-content-between" >
+                            <figure class="m-0">
+                                <img src="images/event-1.jpg" alt="">
+                            </figure>
+
+                            <div class="event-content-wrap">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <h3 class="entry-title w-100 m-0"><a>Fundraiser for Kids</a></h3>
+
+                                    <div class="posted-date">
+                                        <a>Aug 25, 2018 </a>
+                                    </div><!-- .posted-date -->
+
+                                    <div class="cats-links">
+                                        <a>Room New York</a> 
+                                    </div><!-- .cats-links -->
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                                    <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.adipiscing elit. Mauris tempus vestib ulum mauris.adipiscing elit. Mauris tempus vestib ulum mauris.adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                </div><!-- .entry-content -->
+
+                                <div class="entry-footer">
+                                    <a href="single-causes.html">了解更多</a>
+                                </div><!-- .entry-footer -->
+                            </div><!-- .event-content-wrap -->
+                        </div><!-- .event-wrap -->
+
+                        <div class="event-wrap d-flex flex-wrap justify-content-between">
+                            <figure class="m-0">
+                                <img src="images/event-2.jpg" alt="">
+                            </figure>
+
+                            <div class="event-content-wrap">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <h3 class="entry-title w-100 m-0"><a>Bring water to the childrens</a></h3>
+
+                                    <div class="posted-date">
+                                        <a>Aug 25, 2018</a>
+                                    </div><!-- .posted-date -->
+
+                                    <div class="cats-links">
+                                        <a></a>Ball Room New York
+                                    </div><!-- .cats-links -->
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                                    <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                </div><!-- .entry-content -->
+
+                                <div class="entry-footer">
+                                    <a href="single-causes.html">了解更多</a>
+                                </div><!-- .entry-footer -->
+                            </div><!-- .event-content-wrap -->
+                        </div><!-- .event-wrap -->
+
+                        <div class="event-wrap d-flex flex-wrap justify-content-between">
+                            <figure class="m-0">
+                                <img src="images/event-3.jpg" alt="">
+                            </figure>
+
+                            <div class="event-content-wrap">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <h3 class="entry-title w-100 m-0"><a>Bring water to the childrens</a></h3>
+
+                                    <div class="posted-date">
+                                        <a>Aug 25, 2018 </a>
+                                    </div><!-- .posted-date -->
+
+                                    <div class="cats-links">
+                                        <a>Ball Room New York</a>
+                                    </div><!-- .cats-links -->
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                                    <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                </div><!-- .entry-content -->
+
+                                <div class="entry-footer">
+                                    <a href="single-causes.html">了解更多</a>
+                                </div><!-- .entry-footer -->
+                            </div><!-- .event-content-wrap -->
+                        </div><!-- .event-wrap -->
+                    </div><!-- .upcoming-events -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-6">
+                    <div class="featured-cause" id="featured-cause">
+                        <div class="section-heading">
+                            <h2 class="entry-title">特色公益</h2>
+                        </div><!-- .section-heading -->
+
+                        <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                            <figure class="m-0">
+                                <img src="images/featured-causes.jpg" alt="">
+                            </figure>
+
+                            <div class="cause-content-wrap">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <h3 class="entry-title w-100 m-0"><a>Fundraiser for Kids</a></h3>
+
+                                    <div class="posted-date">
+                                        <a>Aug 25, 2018</a>
+                                    </div><!-- .posted-date -->
+
+                                    <div class="cats-links">
+                                        <a>Ball Room New York</a>
+                                    </div><!-- .cats-links -->
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                                    <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
+                                </div><!-- .entry-content -->
+
+                                <div class="entry-footer mt-5">
+                                    <a href="single-causes.html#donate" class="btn gradient-bg mr-2">立刻捐助</a>
+                                </div><!-- .entry-footer -->
+                            </div><!-- .cause-content-wrap -->
+
+                            <div class="fund-raised w-100">
+                                <div class="featured-fund-raised-bar barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div><!-- .tipWrap -->
+
+                                    <span class="fill" data-percentage="83"></span>
+                                </div><!-- .fund-raised-bar -->
+
+                                <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                    <div class="fund-raised-total mt-4">
+                                        Raised: $56 880
+                                    </div><!-- .fund-raised-total -->
+
+                                    <div class="fund-raised-goal mt-4">
+                                        Goal: $70 000
+                                    </div><!-- .fund-raised-goal -->
+                                </div><!-- .fund-raised-details -->
+                            </div><!-- .fund-raised -->
+                        </div><!-- .cause-wrap -->
+                    </div><!-- .featured-cause -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-events -->
+
+    <div class="our-causes" >
+        <div class="container">
+            <div class="row">
+                <div class="coL-12">
+                    <div class="section-heading">
+                        <h2 class="entry-title">我们的慈善项目</h2>
+                    </div><!-- .section-heading -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="swiper-container causes-slider">
+                        <div class="swiper-wrapper" id="goingCauses">
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="images/cause-1.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="single-causes.html" class="btn gradient-bg mr-2">立刻捐助</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0 "><a>Bring water to the childrens</a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum maurLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum maur</p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-1 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="83"></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    Raised: $56 880
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                    Goal: $70 000
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="images/cause-2.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="single-causes.html" class="btn gradient-bg mr-2">立刻捐助</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a>Education for all</a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-2 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="70"></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    Raised: $56 880
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                    Goal: $70 000
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="images/cause-3.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="single-causes.html" class="btn gradient-bg mr-2">立刻捐助</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a>Bring water to the childrens</a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-3 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="83"></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    Raised: $56 880
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                    Goal: $70 000
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="images/cause-1.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="single-causes.html" class="btn gradient-bg mr-2">立刻捐助</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a>Bring water to the childrens</a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 hide_text_03">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-4 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="83"></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    Raised: $56 880
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                    Goal: $70 000
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="images/cause-2.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="single-causes.html" class="btn gradient-bg mr-2">立刻捐助</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a>Education for all</a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-5 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="70"></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    Raised: $56 880
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                    Goal: $70 000
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="images/cause-3.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="single-causes.html" class="btn gradient-bg mr-2">立刻捐助</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a>Bring water to the childrens</a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0 hide_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-6 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="83"></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    Raised: $56 880
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                    Goal: $70 000
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+                        </div><!-- .swiper-wrapper -->
+
+                    </div><!-- .swiper-container -->
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+                    </div>
+
+                    <div class="swiper-button-prev flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+                    </div>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .our-causes -->
+
+    <div class="home-page-limestone">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="coL-12 col-lg-6">
+                    <div class="section-heading">
+                        <h2 class="entry-title">目前已经实现的目标</h2>
+
+                        <p class="mt-5">我们热衷于寻找需要帮助的儿童，并给予可能的帮助。经过我们不懈的努力，我们慢慢的贡献着我们所能贡献的力量。</p>
+                    </div><!-- .section-heading -->
+                </div><!-- .col -->
+                <div class="col-12 col-lg-6">
+                    <div class="milestones d-flex flex-wrap justify-content-between">
+                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
+                            <div class="counter-box">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="./images/donation.png" alt="">
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-baseline">
+                                    <div class="start-counter" data-to="120" data-speed="2000" id="raisedMoney"></div>
+                                    <div class="counter-k">K</div>
+                                </div>
+
+                                <h3 class="entry-title">已经筹集的总资金</h3><!-- entry-title -->
+                            </div><!-- counter-box -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
+                            <div class="counter-box">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="images/teamwork.png" alt="">
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-baseline">
+                                    <div class="start-counter" data-to="79" data-speed="2000" id="finishedCauseNum"></div>
+                                </div>
+
+                                <h3 class="entry-title">已经完成的慈善项目</h3><!-- entry-title -->
+                            </div><!-- counter-box -->
+                        </div><!-- .col -->
+
+                        <div class="col-12 col-sm-4 mt-5 mt-lg-0">
+                            <div class="counter-box">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="images/dove.png" alt="">
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-baseline">
+                                    <div class="start-counter" data-to="253" data-speed="2000" id="volunteerNum"></div>
+                                </div>
+
+                                <h3 class="entry-title">已加入的志愿者</h3><!-- entry-title -->
+                            </div><!-- counter-box -->
+                        </div><!-- .col -->
+                    </div><!-- .milestones -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .our-causes -->
+
+    <footer class="site-footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="foot-about">
+                            <h2><a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a></h2>
+
+                            <p>公益的灵魂--帮助真正需要帮助的人。通过的平台让每个人都能伸出援助之手,让身在困境之中的人得到帮助和感受社会的温暖,致力于找到那些真正需要帮助的人们，希望您能同我一起为他们贡献出一份力。</p>
+                        </div><!-- .foot-about -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                       <center><h2>网站导航</h2></center>
+
+                        <ul style="padding-left: 100px;">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="portfolio.html">图片集</a></li>
+                            <li><a href="news.html">慈善项目</a></li>
+                            <li><a href="about.html">成为志愿者</a></li>
+                            <li><a href="news.html">新闻资讯</a></li>
+                            <li><a href="causes.html">捐赠情况</a></li>
+                        </ul>
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div class="foot-latest-news">
+                            <h2>最新资讯</h2>
+
+                            <ul id="foot-latest-news">
+                                <li>
+                                    <h3><a href="single-news.html">A new cause to help</a></h3>
+                                    <div class="posted-date">MArch 12, 2018</div>
+                                </li>
+
+                                <li>
+                                    <h3><a href="single-news.html">We love to help people</a></h3>
+                                    <div class="posted-date">MArch 12, 2018</div>
+                                </li>
+
+                                <li>
+                                    <h3><a href="single-news.html">The new ideas for helping</a></h3>
+                                    <div class="posted-date">MArch 12, 2018</div>
+                                </li>
+                            </ul>
+                        </div><!-- .foot-latest-news -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div class="foot-contact">
+                            <h2>联系方式</h2>
+
+                            <ul>
+                                <li><i class="fa fa-phone"></i><span>13219899635</span></li>
+                                <li><i class="fa fa-envelope"></i><span>1369281736@qq.com</span></li>
+                                <li><i class="fa fa-map-marker"></i><span>四川省 成都 青羊区 XXX路5号</span></li>
+                            </ul>
+                        </div><!-- .foot-contact -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-widgets -->
+
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-bar -->
+    </footer><!-- .site-footer -->
+	
+	
+	<!-- js -->
+	    <script type='text/javascript' src='js/jquery.js'></script>
+		<script type='text/javascript' src='js/bootstrap.min.js'></script>
+	    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+	    <script type='text/javascript' src='js/swiper.min.js'></script>
+	    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+	    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+	    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+	    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
+	    <script type='text/javascript' src='js/custom.js'></script>
+	    <script type='text/javascript' src='layer/layer.js'></script>
+        <script type='text/javascript' src='js/funcJs/base.js'></script>
+        <script type='text/javascript' src='js/funcJs/uploadFile.js'></script>
+        <script type='text/javascript' src='js/funcJs/index.js'></script>
+
+</body>
+</html>

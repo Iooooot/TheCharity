@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/project_TheCharity?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+server:
+  port: 8081
+  servlet:
+    context-path: /TheCharity
+
+alipay:
+  # APPID 登录支付宝会生成
+  appId: 2021000119614937
+  # 商户私钥，您的PKCS8格式RSA2私钥
+  privateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDX94S4ol+7gLXoomIGLZ0kSWfhx9QXYtXy/U3vo0WlYfbf/fzIFlwIKjbuagfNLXnA6NJNzsKXp1g9DAfQvyZb6PHeBFLmtVZ9SoD2lA1mq+WgsSPJbWAiYGnmhuBkRHAHgEsEdeWNyt04VPhomfs+PXq4fL77Okdubz0Fau45C6n02bc4GikhSgRNy95VOta7UFH3P6uC19OrBvE+Ogd5MP+R0ZyHDlsfD+pwfqjPC3PLn3AI3csRlx9nEBUSaOYabT50T+hRNeE2yt2KDAztFQwvqFK2VWovbZK8L+et56oE2VdyPBQmMrzMWe4pblrJpAvtmolzH/a+WBLZLc+3AgMBAAECggEBALiv/nsauL2Tc30PKL7Z0TGP6NuHVRPuvMJA5p5RRSUKYuHoxXyiym9dEn7Og/9trVpQgFBzyauBO49xM1nLrdUZn4Vasz6CwwUAasrzj4ZG6GeENPNzqqubQdUXcNuuPxPbHcwhun6Ihqg+2fQyAk6WqtUMMRKNIzsIu+lfKXvzr9UqP6k+Ol8cEjMAsOt5V4RA+z2NFIHjiqnrE9rV7xkt9zEKLXV9cuUkk2LtA6UmuJDCWBJQI5BYVBCpNfjjq2GxpzpAT5toIMX2cC6ffqiV+imHDczEGPDlgWXzt/cOv9sEeHQCR3K8qr6WoTlaE5cIg/0cYXe6cRYNSCle/7kCgYEA+BzVuIzVggjRqiqjlwc/oOKXgMXAaR91EZtKnzCm9RaSHnnH6D+cB025mJ+qSs8bQfvyf1PDa/cXYJxx7vwUuLT8Z7Z28p1FdDs2bJv4lxzn6t9J5AnPjgy9o14K4kPbh1wf6hGqREkP89dsdUqV/kYmJSAg9BeoYWPhwTvx0y0CgYEA3tUUApmABrTTuDSVdkYsfe6lGIxmClw5KoT5Dxzo0EHdbIP7QjlDnaJyboWVQtD3YYYaY5s8HmBMpgHCK/qrCV02zkqrROZkKammzYgoOClrEfDt3O09RmZccbc8+rs1aPi9pnjVsPsrGcXebm7pL0h/rHuzhKqMk+KGXnJVTPMCgYAUO0WyJsnCMLXoClIMnqqxk8iG15k4+Teyl9cd4/m5Qn3nvkZuycEPV2cq6toX/4tZdhHwEAR/aUaeuiMQOb320ctDKb3JSsm/EJT/hjhfGhxPKqX70lD6ZE+SYrjAeogMIZb4nzgjGVITsB1H8y0H7vBtVpFZVhSE3IAsIZc2gQKBgAnYwJmcztt9Ah4RtMkVMMIf2YvMKHYsvRnz5k2UqXUKdA5nhqLWhPZiR0w6+u2I7mWQ13mvUmjFOJ3dVgc7fHNdex6Cji7tP1/X71cFvUE+E00nqFsq4JpLy6n6vucVfra0xyykCk1Xy//Hjpyyqfs86OdmT/h80Nl4GRfzVXGhAoGAR9EUeEztIE0w2mYsO+0q4mGsQuOlKH7eDkrpkmQu8jbspbXwH6k8GoL6Hm6ybruM6f3AahzhEhJWi0gIdZGb3tN6gWzvJMl+B/GoJLeyaTiADSGMEIdhtf648JQy0NVwBU2iDOTM3lVmgY8R3zx2gD71BsvONdGacJDnwWy4Mic=
+  # 支付宝公钥 RSA2密钥(推荐) 配置好并启动会生成
+  publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnoxs4WOAbAV9lLE6LV7UTsNOyuUSYTplvgqKGd/GZzM1FSeYPoAQRGvNA1vrM5nn7Bf5qKuRmyRLN+QlMPnKzfJ5UQhWXTuiD7e3SiZeRe/HmOzDP3vGQG6dC4a6rRcd3IwPTiqbXxabBXb6kCqlZEVMI0m4Y6HH5PpQNKYw4ayczNYFTcln3Khgc5ewMkz4nlfdo2LmS+0lJA9ePAxmc0VIPyfKLqDXamGpEDuAsrFcRaUEbKR4NGl2aVcS18bjH1DRhV11VYOs3VRmbST4jS0pnAsHUJsg76zmp6wXakPUOrk8z+ftIh5J4DAmW2fg+g76tmbrQhyRYXAmZDeHLQIDAQAB
+  # 服务器异步通知页面路径
+  notifyUrl: http://t5cyv2.natappfree.cc/TheCharity/alipay/notify
+

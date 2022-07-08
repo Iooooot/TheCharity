@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wht.mapper.CausesMapper">
+
+    <select id="selectRaisedMoney" resultType="java.lang.Integer">
+        select sum(raised) from causes
+    </select>
+    <select id="selectFinishedCauseNum" resultType="java.lang.Integer">
+        select count(*) from causes a join causes b on a.id = b.id and a.raised &lt; b.goal
+    </select>
+    <select id="getTodayCausesRaised" resultType="java.lang.Double">
+        select sum(raised) from causes where create_time like concat("%",#{dateTime},"%");
+    </select>
+</mapper>

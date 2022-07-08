@@ -1,0 +1,448 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<head>
+<title>后台管理系统/志愿者管理</title>
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style-responsive.css" rel="stylesheet"/>
+<!-- font CSS -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="css/font.css" type="text/css"/>
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- pagination插件样式 -->
+<link rel="stylesheet" href="css/pagination.css" />
+<!-- 个人信息展示 -->
+<link rel="stylesheet" href="css/admin-effect.css" type="text/css"/>
+<!-- //font-awesome icons -->
+<script src="js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+<section id="container">
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+
+    <a href="index.html" class="logo">
+        TheCharity
+    </a>
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/user2-160x160.jpg" id="adminAvatar">
+                <span class="username" id="topUsername">管理员01</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#" onclick="return showInfo()"><i class=" fa fa-suitcase"></i>个人信息</a></li>
+                <li><a href="#" onclick="return adminLogout()"><i class="fa fa-key"></i>注销</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+       
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-heart"></i>
+                        <span>慈善项目相关数据</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="table_donate.html">捐助详细情况</a></li>
+                        <li><a href="table_causes.html">慈善项目管理</a></li>
+                    </ul>
+                </li>
+        		<li class="sub-menu">
+        		    <a class="active" href="javascript:;">
+        		        <i class="fa fa-group"></i>
+        		        <span>志愿者相关数据</span>
+        		    </a>
+        		    <ul class="sub">
+        		        <li><a class="active" href="table_volunteer.html">志愿者信息管理</a></li>
+        		    </ul>
+        		</li>
+        		<li class="sub-menu">
+        		    <a href="javascript:;">
+        		        <i class="fa fa-tablet"></i>
+        		        <span>新闻资讯相关数据</span>
+        		    </a>
+        		    <ul class="sub">
+        		        <li><a href="table_news.html">新闻资讯管理</a></li>
+        		        <li><a href="table_comments.html">资讯评论管理</a></li>
+        		    </ul>
+        		</li>
+                <li>
+                    <a href="#" onclick="return adminLogout()">
+                        <i class="fa fa-sign-out"></i>
+                        <span>注销</span>
+                    </a>
+                </li>
+            </ul>            
+        </div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<div class="table-agile-info">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      志愿者数据表
+    </div>
+    <div class="row w3-res-tb">
+      <div class="col-sm-5 m-b-xs">
+		<button class="btn btn-sm btn-default" onclick="showAddModel()">添加志愿者</button>
+        <button class="btn btn-sm btn-default" id="delBtn" onclick="delChecked()">删除选中</button>
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-3">
+        <div class="input-group">
+            <input type="text" class="input-sm form-control" id="keywordInput" value="" placeholder="请输入搜索条件">
+           <span class="input-group-btn">
+            <button class="btn btn-sm btn-default" onclick="searchKeyword()" type="button">查询</button>
+           </span>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped b-t b-light"  style="vertical-align: middle;">
+        <thead>
+          <tr>
+            <th style="width:20px;">
+              <label class="i-checks m-b-none">
+                <input type="checkbox" id="checkAllBox"><i></i>
+              </label>
+            </th>
+            <th>Id</th>
+			<th>Name</th>
+			<th>Skills</th>
+			<th>Phone</th>
+            <th>Email</th>
+			<th>Address</th>
+            <th>AddTime</th>
+            <th style="width:30px;"></th>
+          </tr>
+        </thead>
+
+        <tbody id="volunteerPage">
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>1</td>
+            <td>Idrawfast</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td><span class="text-ellipsis">1369281736@qq.com</span></td>
+            <td><span class="text-ellipsis">四川成都市金牛区</span></td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer" onclick="showEditModel(this)"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>2</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>3</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>4</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>5</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>6</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>7</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="items"><i></i></label></td>
+            <td>8</td>
+            <td>Formasa</td>
+            <td>计算机</td>
+            <td>13219899635</td>
+            <td>1369281736@qq.com</td>
+            <td>四川成都市金牛区</td>
+            <td>Jul 22, 2013</td>
+            <td>
+                <i data-id = '1' class="fa fa-wrench text-success text-active editVolunteer"></i><i class="fa fa-times text-danger text"></i>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer class="panel-footer">
+      <div class="row">
+        
+        <div class="col-sm-5 text-center">
+          <small class="text-muted inline m-t-sm m-b-sm"></small>
+        </div>
+        <div class="col-sm-7 text-right text-center-xs" id="paginationBody">
+          <ul class="pagination pagination-sm m-t-none m-b-none">
+            <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</section>
+
+</section>
+
+<!--main content end-->
+</section>
+
+
+<!--个人信息模态框-->
+<div id="infoModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">个人信息</h4>
+      </div>
+      <div class="modal-body">
+          <div class="single-member effect-1">
+              <div class="member-image">
+                  <img src="images/user2-160x160.jpg" id="adminAvatarBig" alt="Member">
+              </div>
+              <div class="member-info">
+                  <h3 class="adminName" id="adminName">管理员01</h3>
+                  <h3>工号：<span  class="workNo" id="adminId">001</span></h3>
+                  <p id="adminInfo">这个人很懒！！没有作出任何留言！！！若有任何问题请联系下方邮箱！！！！</p>
+                  <div class="social-touch">
+                      联系邮箱：<p id="adminEmail">1369281736@qq.com</p>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--添加志愿者模态框-->
+<div id="addModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">添加志愿者</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group" id="formContent">
+          <label for="add_Vtname">志愿者名字(必填)：</label>
+          <input type="text" class="form-control" id="add_Vtname">
+		  <label for="add_tel">电话(必填)：</label>
+		  <input type="tel" class="form-control" id="add_tel" placeholder="输入电话">
+		  <label for="add_email">邮箱(必填)：</label>
+		  <input type="email" class="form-control" id="add_email" placeholder="输入邮箱">
+          <label for="add_address">地址(必填)：</label>
+          <input type="text" class="form-control" id="add_address" placeholder="输入地址">
+		  <label for="add_skill">专业技能(必选)：</label>
+		  <select class="form-control" id="add_skill">
+			<option name ="skills">请选择自己擅长的专业技能：</option>
+		  	<option name ="skills">医疗技能</option>
+			<option name ="skills">工程监理</option>
+			<option name ="skills">金融管理</option>
+			<option name ="skills">财务审计</option>
+			<option name ="skills">摄影摄像</option>
+			<option name ="skills">新闻传播</option>
+			<option name ="skills">计算机</option>
+			<option name ="skills">文字编辑</option>
+			<option name ="skills">外语</option>
+		  </select>
+          <label for="add_age">真实年龄:</label>
+          <input type="number" class="form-control" id="add_age" placeholder="输入真实年龄">
+          <label>性别</label><br/>
+          <input type="radio"  name="sex" id="add_sex" value="1">男
+          <input type="radio" name="sex" id="add_sex2" value="0">女<br/>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" onclick="addVolunteer()">确定添加</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--修改志愿者模态框-->
+<div id="editModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改志愿者信息</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <input type="hidden" id="volunteerId">
+			<label for="edit_Vtname">志愿者名字(必填)：</label>
+			<input type="text" class="form-control" id="edit_Vtname">
+			<label for="edit_tel">电话(必填)：</label>
+			<input type="tel" class="form-control" id="edit_tel" placeholder="输入电话">
+			<label for="edit_email">邮箱(必填)：</label>
+			<input type="email" class="form-control" id="edit_email" placeholder="输入邮箱">
+			<label for="edit_address">地址(必填)：</label>
+			<input type="text" class="form-control" id="edit_address" placeholder="输入地址">
+			<label for="edit_skill">专业技能(必选)：</label>
+			<select class="form-control" id="edit_skill">
+				<option name ="skills">请选择自己擅长的专业技能：</option>
+				<option name ="skills">医疗技能</option>
+				<option name ="skills">工程监理</option>
+				<option name ="skills">金融管理</option>
+				<option name ="skills">财务审计</option>
+				<option name ="skills">摄影摄像</option>
+				<option name ="skills">新闻传播</option>
+				<option name ="skills">计算机</option>
+				<option name ="skills">文字编辑</option>
+				<option name ="skills">外语</option>
+			</select>
+			<label for="edit_age">真实年龄:</label>
+			<input type="number" class="form-control" id="edit_age" placeholder="输入真实年龄">
+			<label>性别：</label><br/>
+			<input type="radio"  name="sex" id="edit_sex" value="1">男
+			<input type="radio" name="sex" id="edit_sex2" value="0">女<br/>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"  onclick="editVolunteer()">确定修改</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="js/jquery.scrollTo.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script src="js/funJs/base.js"></script>
+<script src="js/funJs/volunteer.js"></script>
+<script>
+    //动态全选全不选
+    $("#checkAllBox").click(function(){
+        $(":checkbox[name='items']").prop("checked",this.checked);
+    })
+    $(":checkbox[name='items']").click(function(){
+        var allcount = $(":checkbox[name='items']").length;
+        var checkedCount = $(":checkbox[name='items']:checked").length;
+        $("#checkAllBox").prop("checked",allcount == checkedCount);
+    })
+
+</script>
+</body>
+</html>

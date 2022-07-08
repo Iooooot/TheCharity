@@ -1,0 +1,12 @@
+com\wht\config\FilterConfig.class
+com\wht\controller\AlipayController.class
+com\wht\controller\DonationsController.class
+com\wht\config\CorsConfig.class
+com\wht\controller\UserController.class
+com\wht\controller\VolunteerController.class
+com\wht\controller\CommentsController.class
+com\wht\controller\ResourceController.class
+com\wht\controller\NewsController.class
+com\wht\controller\CausesController.class
+com\wht\filter\UserLoginFilter.class
+com\wht\TheCharityApplication.class

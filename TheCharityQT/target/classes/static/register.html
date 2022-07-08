@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TheCharity爱心公益网</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="css/elegant-fonts.css">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+	
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="single-page about-page">
+<header class="site-header">
+    <div class="top-header-bar">
+        <div class="container">
+            <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                    <div class="header-bar-email">
+                        电子邮箱：<a href="#">1369281736@qq.com</a>
+                    </div><!-- .header-bar-email -->
+
+                    <div class="header-bar-text">
+                        <p> 捐助热线：<span>13219899635</span></p>
+                    </div><!-- .header-bar-text -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+
+                    <div class="donate-btn" style="margin-left: 2px;">
+                    	<a href="login.html">登录</a>
+                    </div>
+                    <div class="donate-btn" style="margin-left: 2px;">
+                        <a href="register.html">注册</a>
+                    </div>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div>
+
+    <div class="nav-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="site-branding d-flex align-items-center">
+                        <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo.png" alt="logo"></a>
+                    </div><!-- .site-branding -->
+
+                    <nav class="site-navigation d-flex justify-content-end align-items-center">
+                        <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="portfolio.html">图片集</a></li>
+                            <li><a href="allCauses.html">慈善项目</a></li>
+                            <li><a href="about.html">成为志愿者</a></li>
+                            <li><a href="news.html">新闻资讯</a></li>
+                            <li><a href="causes.html">捐赠情况</a></li>
+                        </ul>
+                    </nav><!-- .site-navigation -->
+
+                    <div class="hamburger-menu d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	 <section class="forms">
+	         <div class="container">
+	             <div class="forms-grid">
+	 
+	                 <!-- register -->
+					 <div class="register">
+						 <span class="fa fa-user-circle"></span>
+						 <strong>注册账号</strong>
+						 <form action="#" method="post" class="register-form" onsubmit="return false;">
+							 <fieldset>
+								 <div class="form">
+									 <p><span style="color: red;" id="error_msg"></span></p>
+									 <div class="form-row">
+										 <label class="form-label" for="username">用户名：</label>
+										 <input type="text" class="form-text" id="username">
+									 </div>
+									 <div class="form-row">
+										 <label class="form-label" for="pwd">密码：</label>
+										 <input type="password" class="form-text" id="pwd">
+									 </div>
+									 <div class="form-row">
+									 	<label class="form-label" for="pwdAgain">再次输入密码：</label>
+									 	<input type="password" class="form-text" id="pwdAgain">
+									 </div>
+                                     <div class="form-row">
+                                         <label class="form-label" for="email">邮箱：</label>
+                                         <input type="email" class="form-text" id="email">
+                                     </div>
+                                     <br>
+                                     <div class="form-row">
+                                         <label class="form-label" for="emailCheckCode">邮箱验证码：</label>
+                                         <input type="text" class="form-text" style="width: 30%;" id="emailCheckCode">
+                                         <button style="margin-left: 15px;margin-bottom: 20px;" id="getCode" onclick="getCheckCode()">获取验证码</button>
+                                         <input type="text" id="realCheckCode" style="display: none">
+                                     </div>
+									 <div class="form-row button-login">
+										 <button class="btn btn-login" onclick="register()">注册</button>
+									 </div>
+								 </div>
+							 </fieldset>
+							 </form>
+					 </div>
+					 <!-- //register -->
+	             </div>
+	 
+	         </div>
+	     </section>
+
+
+
+    
+    <footer class="site-footer">
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="foot-about">
+                                <h2><a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a></h2>
+    
+                                <p>公益的灵魂--帮助真正需要帮助的人。通过的平台让每个人都能伸出援助之手,让身在困境之中的人得到帮助和感受社会的温暖,致力于找到那些真正需要帮助的人们，希望您能同我一起为他们贡献出一份力。</p>
+                            </div><!-- .foot-about -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                           <center><h2>网站导航</h2></center>
+    
+                            <ul style="padding-left: 100px;">
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="portfolio.html">图片集</a></li>
+                                <li><a href="news.html">慈善项目</a></li>
+                                <li><a href="about.html">成为志愿者</a></li>
+                                <li><a href="news.html">新闻资讯</a></li>
+                                <li><a href="causes.html">捐赠情况</a></li>
+                            </ul>
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-latest-news">
+                                <h2>最新资讯</h2>
+    
+                                <ul id="foot-latest-news">
+                                    <li>
+                                        <h3><a href="single-news.html">A new cause to help</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+    
+                                    <li>
+                                        <h3><a href="single-news.html">We love to help people</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+    
+                                    <li>
+                                        <h3><a href="single-news.html">The new ideas for helping</a></h3>
+                                        <div class="posted-date">MArch 12, 2018</div>
+                                    </li>
+                                </ul>
+                            </div><!-- .foot-latest-news -->
+                        </div><!-- .col -->
+    
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                            <div class="foot-contact">
+                                <h2>联系方式</h2>
+    
+                                <ul>
+                                    <li><i class="fa fa-phone"></i><span>13219899635</span></li>
+                                    <li><i class="fa fa-envelope"></i><span>1369281736@qq.com</span></li>
+                                    <li><i class="fa fa-map-marker"></i><span>四川省 成都 青羊区 XXX路5号</span></li>
+                                </ul>
+                            </div><!-- .foot-contact -->
+    
+                            <!--<div class="subscribe-form">
+                                <form class="d-flex flex-wrap align-items-center">
+                                    <input type="email" placeholder="Your email">
+                                    <input type="submit" value="send">
+                                </form>
+                            </div> .search-widget -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-widgets -->
+    
+            <div class="footer-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    					          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div><!-- .col-12 -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .footer-bar -->
+        </footer><!-- .site-footer -->
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+    <script type='text/javascript' src='layer/layer.js'></script>
+	<script type='text/javascript' src='js/funcJs/user.js'></script>
+</body>
+</html>

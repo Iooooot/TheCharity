@@ -1,0 +1,365 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<head>
+<title>后台管理/主页</title>
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style-responsive.css" rel="stylesheet"/>
+<!-- font CSS -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="css/font.css" type="text/css"/>
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link rel="stylesheet" href="css/morris.css" type="text/css"/>
+<!-- 个人信息展示 -->
+<link rel="stylesheet" href="css/admin-effect.css" type="text/css"/>
+<!-- //font-awesome icons -->
+<script src="js/jquery2.0.3.min.js"></script>
+<script src="js/raphael-min.js"></script>
+<script src="js/morris.js"></script>
+</head>
+<body>
+<section id="container">
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+    <a href="index.html" class="logo">
+        TheCharity
+    </a>
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/user2-160x160.jpg" id="adminAvatar">
+                <span class="username" id="topUsername">管理员01</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#" onclick="return showInfo()"><i class=" fa fa-suitcase"></i>个人信息</a></li>
+                <li><a href="#" onclick="return adminLogout()"><i class="fa fa-key"></i>注销</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+       
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a class="active" href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-heart"></i>
+                        <span>慈善项目相关数据</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="table_donate.html">捐助详细情况</a></li>
+                        <li><a href="table_causes.html">慈善项目管理</a></li>
+                    </ul>
+                </li>
+				<li class="sub-menu">
+				    <a href="javascript:;">
+				        <i class="fa fa-group"></i>
+				        <span>志愿者相关数据</span>
+				    </a>
+				    <ul class="sub">
+				        <li><a href="table_volunteer.html">志愿者信息管理</a></li>
+				    </ul>
+				</li>
+				<li class="sub-menu">
+				    <a href="javascript:;">
+				        <i class="fa fa-tablet"></i>
+				        <span>新闻资讯相关数据</span>
+				    </a>
+				    <ul class="sub">
+				        <li><a href="table_news.html">新闻资讯管理</a></li>
+				        <li><a href="table_comments.html">资讯评论管理</a></li>
+				    </ul>
+				</li>
+                
+                <li>
+                    <a href="#" onclick="return adminLogout()">
+                        <i class="fa fa-sign-out"></i>
+                        <span>注销</span>
+                    </a>
+                </li>
+            </ul>            
+		</div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<!-- //market-->
+		<div class="market-updates">
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-2">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-usd"> </i>
+					</div>
+					 <div class="col-md-8 market-update-left">
+					 <h4>已筹集资金：</h4>
+					<h3><span id="raisedAmount">16666</span>&nbsp;¥</h3>
+				  </div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-1">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-users" ></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+					<h4>用户数量：</h4>
+						<h3><span id="usersNum">1250</span></h3>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-3">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-users"></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+						<h4>志愿者数量：</h4>
+						<h3 id="volunteerNum">160</h3>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-4">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+						<h4>新闻报道数：</h4>
+						<h3 id="newsNum">680</h3>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+		   <div class="clearfix"> </div>
+		</div>	
+		
+			<!-- tasks -->
+			<div class="agile-last-grids">
+				<div class="col-md-4 agile-last-left agile-last-middle">
+					<div class="agile-last-grid">
+						<div class="area-grids-heading">
+							<h3>慈善项目数据</h3>
+						</div>
+						<div id="graph8"></div>
+						<script>
+						// var day_data = [
+						//   {"period": "2021-10-01",  "已筹集": 660},
+						//   {"period": "2021-09-30",  "已筹集": 629},
+						//   {"period": "2021-09-29", "已筹集": 250},
+						//   {"period": "2021-09-20", "已筹集": 661},
+						//   {"period": "2021-09-19",  "已筹集": 335},
+						//   {"period": "2021-09-18",  "已筹集": 627},
+						//   {"period": "2021-09-17", "已筹集": 456},
+						//   {"period": "2021-09-16",  "已筹集": 676},
+						//   {"period": "2021-09-15",  "已筹集": 825},
+						//   {"period": "2021-09-10", "已筹集": 622}
+						// ];
+						// Morris.Bar({
+						//   element: 'graph8',
+						//   data: day_data,
+						//   xkey: 'period',
+						//   ykeys: [ '已筹集'],
+						//   labels: ['已筹集'],
+						//   xLabelAngle: 40
+						// });
+						</script>
+					</div>
+				</div>
+				<div class="col-md-4 agile-last-left agile-last-right">
+					<div class="agile-last-grid">
+						<div class="area-grids-heading">
+							<h3>新闻报道数据</h3>
+						</div>
+						<div id="graph9"></div>
+						<script>
+						// var day_data = [
+						//   {"period": "02-10", "published": 2},
+						//   {"period": "02-11", "published": 24},
+						//   {"period": "02-12", "published": 3},
+						//   {"period": "02-13", "published": 12},
+						//   {"period": "02-14", "published": 13},
+						//   {"period": "02-15", "published": 22},
+						//   {"period": "02-16", "published": 5},
+						//   {"period": "02-17", "published": 26},
+						//   {"period": "02-18", "published": 12},
+						//   {"period": "02-19", "published": 19}
+						// ];
+						// Morris.Line({
+						//   element: 'graph9',
+						//   data: day_data,
+						//   xkey: 'period',
+						//   ykeys: ['published'],
+						//   labels: ['published'],
+						//   parseTime: false
+						// });
+						</script>
+
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		<!-- //tasks -->
+			<div class="agileits-w3layouts-stats">
+					<div class="col-md-8 stats-info stats-last widget-shadow">
+						<div class="stats-last-agile">
+							
+							<table class="table stats-table ">
+								<h2>慈善项目进度：</h2>
+								<thead>
+									<tr>
+										<th>项目编号</th>
+										<th>项目名称</th>
+										<th>项目状态</th>
+										<th>项目进度</th>
+									</tr>
+								</thead>
+								<tbody id="causeProgress">
+									<tr>
+										<th scope="row">1</th>
+										<td>Lorem ipsum</td>
+										<td><span class="label label-success">进行中...</span></td>
+										<td><div class="progress progress-striped active">
+												<div class="bar green" style="width:85%;">85%</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Aliquam</td>
+										<td><span class="label label-success">进行中...</span></td>
+										<td><div class="progress progress-striped active">
+												<div class="bar green" style="width:30%;">30%</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Lorem ipsum</td>
+										<td><span class="label label-success">进行中...</span></td>
+										<td><div class="progress progress-striped active">
+												<div class="bar green" style="width:90%;">90%</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Aliquam</td>
+										<td><span class="label label-success">进行中...</span></td>
+										<td><div class="progress progress-striped active">
+												<div class="bar green" style="width:60%;">60%</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Lorem ipsum</td>
+										<td><span class="label label-info">已完成</span></td>
+										<td><div class="progress progress-striped active">
+											<div class="bar blue" style="width:100%;">100%</div>
+										</div></td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Aliquam</td>
+										<td><span class="label label-info">已完成</span></td>
+										<td><div class="progress progress-striped active">
+											<div class="bar blue" style="width:100%;">100%</div>
+										</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+</section>
+
+</section>
+<!--main content end-->
+</section>
+<!--个人信息模态框-->
+<div id="infoModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">个人信息</h4>
+      </div>
+      <div class="modal-body">
+        <div class="single-member effect-1">
+          <div class="member-image">
+            <img src="images/user2-160x160.jpg" id="adminAvatarBig" alt="Member">
+          </div>
+          <div class="member-info">
+            <h3 class="adminName" id="adminName">管理员01</h3>
+			<h3>工号：<span  class="workNo" id="adminId">001</span></h3>
+            <p id="adminInfo">这个人很懒！！没有作出任何留言！！！若有任何问题请联系下方邮箱！！！！</p>
+            <div class="social-touch">
+              联系邮箱：<p id="adminEmail">1369281736@qq.com</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="js/jquery.scrollTo.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/funJs/base.js"></script>
+<script src="js/funJs/index.js"></script>
+</body>
+</html>

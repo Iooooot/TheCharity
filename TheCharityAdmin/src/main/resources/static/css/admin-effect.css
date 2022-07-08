@@ -1,0 +1,9 @@
+/*= effect-1 css =*/
+.effect-1{border-radius: 5px 5px 0 0; padding-bottom: 40px;}
+.effect-1 .member-image {margin-left:40%;border: 2px solid #fff; border-radius: 60px 0; display: inline-block; margin-top: 5px; overflow: hidden; transition: 0.3s;}
+.effect-1 .social-touch{background-color: #3C3C3C; position: absolute; left: 0; bottom: 0; height: 5px; overflow: hidden; padding: 5px 0 0; width: 100%; transition: 0.3s;}
+.effect-1 .member-image img{transition: 0.3s; border-radius: 60px 0;}
+.effect-1:hover .member-image{border-color: #3C3C3C; transition: 0.3s; border-radius: 50%;}
+.effect-1:hover .social-touch{font-size:13px;padding: 6px 80px; height: 50px; transition: 0.5s;color: #FFFFFF;}
+.social-touch p{padding-left: 150px;}
+/*= effect-1 css end =*/
