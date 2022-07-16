@@ -19,7 +19,7 @@ public class test01 {
     public void testEmailSend(){
         String checkCode =MailUtils.creatCode(5);
         String content = "我们已收到您注册账号的申请啦。<br/><br/>您的注册账号验证码为: "+checkCode +"<br/><br/>如果你没有请求此代码，可放心忽略这封电子邮件。别人可能错误地键入了你的电子邮件地址。";
-        MailUtils.sendMail("1725453353@qq.com",content,"测试邮件");
+        MailUtils.sendMail("1725453***@qq.com",content,"测试邮件");
         System.out.println("发送成功");
     }
 
